@@ -1,0 +1,33 @@
+// Hero Section
+
+.hero {
+  background: url("https://cdn.wpi.moe/main/hero-bg.jpg") center center;
+  background-size: cover;
+
+  h1 {
+    font-size: 48px;
+    font-weight: 700;
+    //font-family: Poppins, sans-serif;
+  }
+
+  &:before {
+    content: "";
+    background: rgba(#000, 0.3);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .btn-hero {
+    border-radius: 25px;
+    border: 2px solid #fff;
+    color: #fff;
+
+    &:hover {
+      background: $crimson;
+      border: 2px solid $crimson;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "wpi-wiki",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.14.0",
+    "@nuxtjs/markdownit": "^2.0.0",
+    "core-js": "^3.9.1",
+    "nuxt": "^2.15.2",
+    "swiper": "^6.5.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/google-fonts": "^1.2.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "autoprefixer": "^10.2.5",
+    "fibers": "^5.0.0",
+    "postcss": "^8.2.7",
+    "postcss-loader": "^4.2.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1"
+  }
+}
