@@ -22,13 +22,6 @@
           <p>
             <b>What will you have after 500 years?</b>
           </p>
-          <!--
-          <ul>
-            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-            <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in voluptate velit.</li>
-            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</li>
-          </ul>
-          -->
         </div>
       </div>
     </div>
@@ -36,6 +29,27 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/variables';
-@import '~/assets/scss/parts/about';
+@use '~/assets/scss/variables' as vars;
+
+.about .content {
+  h3 {
+    font-weight: 600;
+    font-size: 26px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      padding-bottom: 10px;
+    }
+
+    i {
+      font-size: 20px;
+      padding-right: 4px;
+      color: vars.$primary;
+    }
+  }
+}
 </style>

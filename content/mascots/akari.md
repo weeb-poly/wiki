@@ -1,5 +1,6 @@
 ---
 title: Akari
+role: "Alternate Mascot"
 cover: "https://cdn.wpi.moe/mascots/akari/cover.png"
 info:
   - key: "Full Name"
@@ -22,6 +23,8 @@ info:
     value: "*Unknown*"
   - key: "Creator"
     value: "Bells"
+  - key: "Role"
+    value: "Alternate Mascot"
 media:
   - src: "https://cdn.wpi.moe/mascots/akari/draft.png"
     title: "Initial Draft"

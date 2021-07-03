@@ -7,16 +7,18 @@
       </div>
     </div>
 
-    <section id="mascot-list" class="py-3">
+    <section class="py-3">
       <div class="container">
-        <div class="my-3 p-3">
-          <div class="d-flex bg-body pt-3">
-            <p class="pb-3 mb-0 lh-sm" v-for="item in data" :key="item.path">
-              <NuxtLink class="d-block" :to="item.path">{{ item.title }}</NuxtLink>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between align-items-start" v-for="item in data" :key="item.path">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">
+                <NuxtLink :to="item.path">{{ item.title }}</NuxtLink>
+              </div>
               {{ item.description }}
-            </p>
-          </div>
-        </div>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 

@@ -18,6 +18,31 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/variables';
-@import '~/assets/scss/parts/navigation';
+@use '~/assets/scss/variables' as vars;
+
+/*
+nav {
+  font-family: "Poppins", sans-serif;
+}
+*/
+
+.navbar {
+  background: vars.$body-bg;
+  box-shadow: 0 0 18px rgba(55, 66, 59, 0.08);
+
+  .navbar-brand {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  a.nav-link {
+    color: lighten(vars.$body-color, 30%);
+  }
+
+  a.navbar-brand,
+  a.nav-link:hover,
+  a.nuxt-link-exact-active {
+    color: vars.$crimson;
+  }
+}
 </style>

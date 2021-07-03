@@ -7,12 +7,21 @@
       </div>
     </div>
 
-    <section id="mascot-list" class="py-3">
+    <section class="py-3">
       <div class="container">
         <div class="row my-1 row-cols-1 row-cols-md-3 g-4 justify-content-md-center">
 
           <div class="col" v-for="item in data" :key="item.path">
-            <PreviewCard :data="item" class="mb-3"></PreviewCard>
+            <BaseCard :src="item.cover" class="mb-3">
+              <template v-slot:header>
+                <NuxtLink :to="item.path">{{ item.title }}</NuxtLink>
+
+                <template v-if="item.role">
+                  <span> - </span>
+                  <span class="text-muted">{{ item.role }}</span>
+                </template>
+              </template>
+            </BaseCard>
           </div>
 
         </div>

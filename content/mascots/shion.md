@@ -1,5 +1,6 @@
 ---
 title: Shion
+role: "Primary Mascot"
 cover: "https://cdn.wpi.moe/mascots/shion/server_icon.png"
 info:
   - key: "Full Name"
@@ -26,6 +27,8 @@ info:
     value: "B79/W57/H73"
   - key: "Creator"
     value: "Cy (Bells)"
+  - key: "Role"
+    value: "Primary Mascot"
 media:
   - src: "https://cdn.wpi.moe/mascots/shion/server_icon.png"
     title: "Current Server Icon"

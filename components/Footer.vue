@@ -51,6 +51,85 @@
 </template>
 
 <style lang="scss" scoped>
-@import '~/assets/scss/variables';
-@import '~/assets/scss/parts/footer';
+@use '~/assets/scss/variables' as vars;
+
+.footer {
+  color: #37423b;
+  font-size: 14px;
+  background: vars.$secondary;
+}
+
+.footer .footer-top {
+  background: vars.$light;
+
+  h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #444;
+    position: relative;
+    padding-bottom: 12px;
+  }
+
+  .footer-contact {  
+    p {
+      //font-family: "Raleway", sans-serif;
+      color: #777;
+    }
+  }
+  
+  /*
+  .footer-links {  
+    ul {
+      list-style: none;
+      margin: 0;
+  
+      i {
+        color: vars.$crimson;
+      }
+
+      a {
+        color: #777;
+        transition: 0.3s;
+        display: inline-block;
+  
+        &:hover {
+          text-decoration: none;
+          color: vars.$crimson;
+        }
+      }
+    }
+  }
+  */
+}
+
+.footer .credits {
+  font-size: 13px;
+
+  a {
+    color: darken(vars.$crimson, 5%);
+    transition: 0.3s;
+
+    &:hover {
+      color: vars.$crimson;
+    }
+  }
+}
+
+.footer .social-links {
+  a {
+    font-size: 18px;
+
+    background: vars.$crimson;
+    color: #fff;
+    margin-right: 4px;
+    border-radius: 50%;
+    transition: 0.3s;
+
+    &:hover {
+      background: darken(vars.$crimson, 5%);
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
 </style>

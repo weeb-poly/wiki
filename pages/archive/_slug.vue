@@ -8,12 +8,12 @@
 export default {
   async asyncData({ $content, params, error }) {
     const { slug } = params;
-    let data; 
+    let data;
 
     try {
-      data = await $content('archive', year, slug).fetch();
+      data = await $content('archive', slug).fetch();
     } catch (e) {
-      error({ message: 'Mascot not found' });
+      error({ message: 'Archive not found' });
     }
 
     return { data };

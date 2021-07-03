@@ -6,7 +6,7 @@
       </div>
 
       <div class="m-info mb-3 ms-md-4">
-        <InfoCard :data="data"></InfoCard>
+        <InfoCard :title="data.title" :img="data.cover" :info="data.info"></InfoCard>
       </div>
 
       <div class="m-content">
@@ -16,45 +16,14 @@
       <div class="m-gallery" v-if="data.media">
         <h4>Gallery</h4>
 
-        <!--
-        <div class="row my-1" :data-masonry="JSON.stringify({'percentPosition':true})">
-          <div class="col-sm-6 col-lg-4 mb-4" v-for="item in data.media" :key="item.src">
-            <div class="card">
-              <img :src="item.src" class="card-img-top">
-
-              <div class="card-body">
-                <p class="card-text" v-html="item.caption"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        -->
-
-        <div class="row my-1 row-cols-1 row-cols-md-3 g-3 justify-content-md-center">
-          <div class="col" v-for="item in data.media" :key="item.src">
-            <!--
-            <figure class="figure">
-              <img :src="item.src" class="figure-img img-fluid rounded">
-              <figcaption class="figure-caption" v-html="item.caption"></figcaption>
-            </figure>
-            -->
-            <div class="card h-100">
-              <img class="card-img-top" :src="item.src">
-              <div class="card-body">
-                <h5 class="card-title" v-html="item.title"></h5>
-                <p class="card-text" v-html="item.text"></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        <Gallery :data="data.media"></Gallery>
       </div>
     </section>
   
   </main>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 #mascot {
   @media (min-width: 768px) {
     display: grid;
@@ -90,39 +59,23 @@
     min-width: 1px;
   }
 }
-
-table.card-body {
-  tr:last-child > * {
-    border-bottom-width: 0;
-  }
-
-  th, td {
-    padding: 0.25rem !important;
-  }
-}
-
-.m-gallery {
-  .card-img,
-  .card-img-top {
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    object-fit: contain;
-  }
-}
-
-.fs-7 {
-  font-size: 0.75rem !important;
-}
 </style>
 
 <script>
 export default {
   async asyncData({ $content, params, error }) {
-    const data = await $content('mascots', params.slug).fetch();
+    const { slug } = params;
+    let data;
+  
+    try {
+      data = await $content('mascots', slug).fetch();
+    } catch (e) {
+      error({ message: 'Mascot not found' });
+    }
 
     return { data };
   },
+
   head() {
     return {
       meta: [

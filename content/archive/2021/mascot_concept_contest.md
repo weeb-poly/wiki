@@ -3,23 +3,26 @@ title: 'Mascot Concept Competiton - 2021'
 description: 'The results of the Mascot Concept Competiton'
 contest:
   - name: Shion
-    rank: "1<sup>st</sup> Place - 18 Votes"
+    rank: "1<sup>st</sup> Place"
+    votes: 18
     img: "https://cdn.wpi.moe/contests/mascot0/shion.png"
     creator: "Cy (Bells)"
     desc: "A grad student at WPI"
-    footer: "Primary Mascot"
+    role: "Primary Mascot"
   - name: Akari
-    rank: "2<sup>nd</sup> Place - 13 Votes"
+    rank: "2<sup>nd</sup> Place"
+    votes: 13
     img: "https://cdn.wpi.moe/contests/mascot0/akari.png"
     creator: "Bells"
     desc: "<i>Unknown</i>"
-    footer: "Alternate Mascot"
+    role: "Alternate Mascot"
   - name: Fukaya
-    rank: "3<sup>rd</sup> Place - 12 Votes"
+    rank: "3<sup>rd</sup> Place"
+    votes: 12
     img: "https://cdn.wpi.moe/contests/mascot0/fukaya.png"
     creator: "Bowserinator"
     desc: "An RPI CS Major who moved from Japan"
-    footer: "Academic Mascot"
+    role: "Academic Mascot"
   - name: Wolfgirl
     rank: "Honorable Mention"
     img: "https://cdn.wpi.moe/contests/mascot0/wolfgirl.png"

@@ -1,5 +1,6 @@
 ---
 title: Fukaya
+role: "Academic Mascot"
 cover: "https://cdn.wpi.moe/mascots/fukaya/cover.png"
 info:
   - key: "Full Name"
@@ -22,6 +23,8 @@ info:
     value: "*Unknown*"
   - key: "Creator"
     value: "Bowserinator"
+  - key: "Role"
+    value: "Academic Mascot"
 media:
   - src: "https://cdn.wpi.moe/mascots/fukaya/contest.png"
     title: "Contest Design"

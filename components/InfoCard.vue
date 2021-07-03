@@ -1,18 +1,20 @@
 <template>
-  <div class="card">
-    <h5 class="card-header">{{ data.title }}</h5>
-    <img class="card-img-top" :src="data.cover">
-    <div class="card-body m-2 p-0">
+  <BaseCard :src="img">
+    <template v-slot:header>
+      {{ title }}
+    </template>
+
+    <template v-slot:body>
       <table class="table card-text fs-7">
         <tbody>
-          <tr v-for="item in data.info" :key="item.key">
+          <tr v-for="item in info" :key="item.key">
             <th scope="row" v-html="$md.renderInline(item.key)"></th>
             <td v-html="$md.renderInline(item.value)"></td>
           </tr>
         </tbody>
       </table>
-    </div>
-  </div>
+    </template>
+  </BaseCard>
 </template>
 
 <style lang="scss" scoped>
@@ -38,8 +40,16 @@ table.card-text {
 <script>
 export default {
   props: {
-    data: {
-      type: Object,
+    img: {
+      type: String,
+      required: true
+    },
+    title: {
+      type: String,
+      required: true
+    },
+    info: {
+      type: Array,
       required: true
     },
   },
