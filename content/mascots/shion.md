@@ -14,7 +14,7 @@ info:
   - key: "Nationality"
     value: "American, Japanese"
   - key: "Blood Type"
-    value: "O"
+    value: "O+"
   - key: "Hair Color"
     value: "Silver"
   - key: "Eye Color"
