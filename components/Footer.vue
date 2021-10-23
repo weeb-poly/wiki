@@ -7,11 +7,7 @@
           <div class="col-lg-3 col-md-6 footer-contact">
             <h3>Weeb Poly Institute</h3>
             <p>
-              1 Chome-15-13 Sotokanda<br>
-              B1F-6F<br>
-              Chiyoda City, Tokyo 101-0021<br>
-              Japan<br><br>
-              <strong>Phone:</strong> +81 3-3252-6166 +81<br>
+              <i>in waifui confidimus</i><br>
               <strong>Email:</strong> 42+notaweeb@wpi.moe
             </p>
           </div>
