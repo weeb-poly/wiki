@@ -1,4 +1,5 @@
 ---
+layout: contest
 title: 'Mascot Concept Competiton - 2021'
 description: 'The results of the Mascot Concept Competiton'
 contest:
@@ -35,18 +36,10 @@ contest:
     desc: "A mischevious elementary school student who managed to sneak into WPI"
 ---
 
-## Mascot Concept Competiton
+# Mascot Concept Competiton
 
 These are the mascots concepts from our mascot concept competition.
 Rankings were decided by votes on a public poll which ran from 3/21/2021 18:00 EDT to 3/28/2021 22:00 EDT.
 The current version of the mascot may differ from the submitted version.
 We've shortened mascot descriptions to fit on the page.
 All server mascots will be recieving their own wiki-like page with more information (WIP).
-
-{{ $frontmatter.contest }}
-
-<CardGrid :columns="3">
-  <!-- TODO: make variation of CustomCard for info -->
-</CardGrid>
-
-<!--<contest :data="contest"></contest>-->

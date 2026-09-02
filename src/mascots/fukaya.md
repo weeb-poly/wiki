@@ -1,7 +1,8 @@
 ---
-title: Fukaya
+layout: mascot
+title: &title Fukaya
 role: "Academic Mascot"
-cover: "https://cdn.wpi.moe/mascots/fukaya/cover.png"
+cover: &cover "https://cdn.wpi.moe/mascots/fukaya/cover.png"
 info:
   - label: "Full Name"
     value: "Fukaya Kaminari"
@@ -20,7 +21,7 @@ info:
   - label: "Height"
     value: "160 cm"
   - label: "Weight"
-    value: "*Unknown*"
+    value: "<i>Unknown</i>"
   - label: "Creator"
     value: "Bowserinator"
   - label: "Role"
@@ -28,17 +29,20 @@ info:
 media:
   - src: "https://cdn.wpi.moe/mascots/fukaya/contest.png"
     title: "Contest Design"
+head:
+  - - meta
+    - name: og:title
+      content: *title
+  - - meta
+    - name: og:image
+      content: *cover
 ---
-
-# Fukaya
-
-<InfoBoxCard :image=$frontmatter.cover :info=$frontmatter.info />
 
 Fukaya is a CS major at RPI who's originally from Japan. A bit shy, but would be happy to talk to you about computers. Organized. Knowledgeable about weeb stuff.
 
 <!--more-->
 
-#### Likes
+## Likes
 
 - Loose clothing
 - Mythology
@@ -46,12 +50,12 @@ Fukaya is a CS major at RPI who's originally from Japan. A bit shy, but would be
 - Tea
 - Video games
 
-#### Dislikes
+## Dislikes
 
 - Wearing hats
 - Being mistaken for a neko
 
-#### Notes
+## Notes
 
 Hair is asymmetrical, the right side has more hair held with clips and a ribbon on the top. Left side has a smaller bit of hair hanging to the front (idk what to call it)
 

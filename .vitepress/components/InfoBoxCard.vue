@@ -2,7 +2,7 @@
 https://github.com/ljw1412/anime-doc/blob/main/.vitepress/components/DocInfoCard.vue
 -->
 <script setup lang="ts">
-import { withBase } from 'vitepress'
+import { withBase } from "vitepress";
 
 interface Props {
   title?: string

@@ -18,36 +18,32 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
       with:
         fetch-depth: 0
 
-    - uses: pnpm/action-setup@v4
-      with:
-        version: 10
-
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '24'
-        cache: 'pnpm'
-
     - name: Setup Pages
-      uses: actions/configure-pages@v4
+      uses: actions/configure-pages@v6
 
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile
+    - uses: pnpm/setup@v2
+      with:
+        cache: true
+
+    - name: Cache VitePress
+      uses: actions/cache@v6
+      with:
+        path: .vitepress/cache
+        key: ${{ runner.os }}-vitepress-${{ hashFiles('src/**', 'deno.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-vitepress-
 
     - name: Build with VitePress
       run: pnpm docs:build
 
     - name: Upload artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v5
       with:
         path: .vitepress/dist
-
-    - name: Build Static Site
-      run: npm run generate
 
   deploy:
     environment:
@@ -59,6 +55,6 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

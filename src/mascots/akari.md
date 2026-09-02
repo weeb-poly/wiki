@@ -1,4 +1,5 @@
 ---
+layout: mascot
 title: &title Akari
 role: "Alternate Mascot"
 cover: &cover "https://cdn.wpi.moe/mascots/akari/cover.png"
@@ -41,14 +42,6 @@ head:
       content: *cover
 ---
 
-# Akari
-
-{{ info }}
-
-<InfoBoxCard :image=$frontmatter.cover :info=$frontmatter.info />
-
 *Unknown*
-
-<!-- TODO: Media Gallery -->
 
 <!--more-->
